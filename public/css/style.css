@@ -10,7 +10,7 @@
   /* Text Colors */
   --text-light: #FFFFFF;
   --text-dark: #2c3e50;
-  --text-muted: #6c757d;
+  --text-muted: #000000;
 
   /* Background Colors */
   --bg-light: #F5F7FA;
@@ -416,7 +416,7 @@ footer span {
 }
 
 footer strong {
-  color: #343a40;
+  color: #000000;
   font-size: 1.1rem;
   margin-bottom: 0.1rem;
 }
