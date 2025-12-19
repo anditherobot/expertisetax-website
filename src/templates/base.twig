@@ -1,0 +1,198 @@
+{# templates/base.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    {# Dynamic Title - uses variable from route or falls back to default #}
+    <title>{{ title|default('Expertise Tax LLC - Professional Tax Services in Greater Boston, MA') }}</title>
+
+    {# Dynamic Meta Description #}
+    <meta name="description" content="{{ meta_description|default('Expertise Tax LLC provides professional tax services in Greater Boston, Massachusetts. We offer personalized service in multiple languages, including Mandarin, Polish, Russian, Ukrainian, Haitian Creole, and English. Contact registered tax preparer Oksana Shuran for expert tax help.') }}">
+
+    {# Dynamic Meta Keywords #}
+    <meta name="keywords" content="{{ meta_keywords|default('tax preparation, tax services, tax help, tax return, tax expert, Boston taxes, Massachusetts taxes, Mandarin tax service, Polish tax service, Russian tax service, Ukrainian tax service, Haitian Creole tax service') }}">
+
+    {# Robots Meta Tag #}
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    {# Canonical URL - Critical for SEO #}
+    <link rel="canonical" href="{{ canonical_url|default('https://expertisetax.com/') }}">
+
+    {# Open Graph Tags - Facebook, LinkedIn, WhatsApp #}
+    <meta property="og:site_name" content="Expertise Tax LLC">
+    <meta property="og:title" content="{{ og_title|default(title|default('Expertise Tax LLC - Professional Tax Services')) }}">
+    <meta property="og:description" content="{{ og_description|default(meta_description|default('Professional tax services in Greater Boston with multilingual support.')) }}">
+    <meta property="og:image" content="https://expertisetax.com{{ og_image|default('/images/logo.png') }}">
+    <meta property="og:image:width" content="544">
+    <meta property="og:image:height" content="566">
+    <meta property="og:url" content="{{ canonical_url|default('https://expertisetax.com/') }}">
+    <meta property="og:type" content="{{ og_type|default('website') }}">
+    <meta property="og:locale" content="en_US">
+
+    {# Twitter Card Tags - Also used by other platforms as fallback #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ og_title|default(title|default('Expertise Tax LLC')) }}">
+    <meta name="twitter:description" content="{{ og_description|default(meta_description|default('Professional tax services in Greater Boston.')) }}">
+    <meta name="twitter:image" content="https://expertisetax.com{{ og_image|default('/images/logo.png') }}">
+
+    {# Additional SEO Meta Tags #}
+    <meta name="author" content="Expertise Tax LLC">
+    <meta name="geo.region" content="US-MA">
+    <meta name="geo.placename" content="Greater Boston">
+    <meta name="geo.position" content="42.3601;-71.0589">
+    <meta name="ICBM" content="42.3601, -71.0589">
+
+    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <link rel="stylesheet" href="/css/services.css">
+
+    {# Holiday theme CSS - auto-enabled December 1-31 #}
+    <link rel="stylesheet" href="/css/holiday-theme.css">
+
+    {# Complete Schema.org JSON-LD Structured Data #}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Expertise Tax LLC",
+        "image": "https://expertisetax.com/images/logo.png",
+        "@id": "https://expertisetax.com",
+        "url": "https://expertisetax.com",
+        "telephone": "+1-617-352-5993",
+        "email": "oksana@expertisetax.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Greater Boston",
+            "addressRegion": "MA",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 42.3601,
+            "longitude": -71.0589
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "description": "Professional tax preparation and filing services in Greater Boston, Massachusetts. Multilingual support available in English, Polish, Russian, Ukrainian, Haitian Creole, and Mandarin.",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.3601,
+                "longitude": -71.0589
+            },
+            "geoRadius": "50000"
+        },
+        "knowsLanguage": [
+            "en",
+            "pl",
+            "ru",
+            "uk",
+            "ht",
+            "zh"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Oksana Shuran",
+            "jobTitle": "Registered Tax Return Preparer"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Tax Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Individual Income Tax Preparation",
+                        "description": "Form 1040 tax preparation services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "State and Local Tax Returns",
+                        "description": "State tax filing services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "E-filing Services",
+                        "description": "Electronic tax filing and direct deposit setup"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Amended Tax Returns",
+                        "description": "Correction of previously filed tax returns"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Prior Year Tax Filing",
+                        "description": "File taxes for previous 3 years"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    
+
+</head>
+<body>
+
+    {{ include('nav.twig') }}
+
+    {# Holiday Banner - appears between nav and content #}
+    {{ include('holiday-banner.twig') }}
+
+    <div class="container-fluid">
+        {% block content %}{% endblock %}
+    </div>
+
+    {{ include('footer.twig') }}
+
+    {# Holiday theme JavaScript - date detection and controls #}
+    <script src="/js/holiday-theme.js"></script>
+    <script src="/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.7.0.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

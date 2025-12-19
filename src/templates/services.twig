@@ -1,0 +1,114 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<main class="container py-5 page-services">
+
+		{# Service Section: Tax Preparation - Using a Card #}
+		<section id="tax-preparation" class="mb-5">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<h2 class="fw-bold mb-3 display-5">
+						Tax Preparation (Individual & Business)
+					</h2>
+
+					{# Two-column row: left for text, right for image #}
+					<div class="row mb-4">
+						<div class="col-md-8">
+							<p class="card-text mb-4 lead" style="font-size: 1.25rem;">
+								Navigating tax season can be stressful and time-consuming.
+								Let Expertise Tax LLC simplify the process for you.
+								We provide professional tax preparation services for individuals.
+								We ensure accuracy and maximize your eligible deductions and credits.
+							</p>
+						</div>
+						<div class="col-md-4">
+							<img src="images/services.jpg"
+								 alt="Tax Preparation Service"
+								 class="img-fluid"
+								  object-fit: cover;">
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+		<section id="tax-preparation" class="mb-5">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<h2 class="fw-bold mt-4 mb-3 display-5">
+						Our Tax Preparation Services Include:
+					</h2>
+
+					{# Two-column row: left for text, right for image #}
+					<div class="row mb-4">
+						<div class="col-md-8">
+							<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">Individual Income Tax Returns (Form 1040)</h5>
+							<p class="text-muted mb-0 fs-6">Complete preparation of your federal income tax return. We handle all schedules, deductions, and credits to maximize your refund.</p>
+						</li>
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">State and Local Tax Returns</h5>
+							<p class="text-muted mb-0 fs-6">File your state and local tax returns accurately and on time. We're familiar with Massachusetts tax laws and requirements.</p>
+						</li>
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">E-filing and Direct Deposit Setup</h5>
+							<p class="text-muted mb-0 fs-6">Fast, secure electronic filing with IRS-approved software. Get your refund deposited directly into your bank account.</p>
+						</li>
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">Year-round Support and Tax Consultation</h5>
+							<p class="text-muted mb-0 fs-6">Expert tax advice doesn't stop after tax season. We're available year-round for planning, questions, and tax strategy.</p>
+						</li>
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">Amended Tax Returns</h5>
+							<p class="text-muted mb-0 fs-6">Made a mistake on a previous return? We'll prepare and file amended returns to correct errors and claim missed deductions.</p>
+						</li>
+						<li class="list-group-item">
+							<h5 class="fw-bold mb-2">File Tax for Previous Years</h5>
+							<p class="text-muted mb-0 fs-6">Catch up on unfiled returns from the past 3 years. We'll help you get compliant and minimize penalties.</p>
+						</li>
+					</ul>
+						</div>
+						<div class="col-md-4">
+							<img src="images/workwithpro.jpg"
+								 alt="Tax Preparation Service"
+								 class="img-fluid"
+								  object-fit: cover;">
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+
+		{{ include('languages.twig') }}
+
+		{# Contact Section - Header outside, details inside a Card #}
+		<section id="contact-section-page" class="py-5 text-center">
+			<div class="card shadow-sm mx-auto" style="max-width: 500px;">
+				<div class="card-body">
+					<h2 class="fw-bold  mb-3">
+						Contact Us Today
+					</h2>
+					<p class="lead text-muted mb-4 mx-auto" style="max-width: 600px;">
+						Let Expertise Tax LLC handle your tax needs. Contact us for a consultation:
+					</p>
+
+					<div class="mb-3 fs-5">
+						<a href="mailto:oksana@expertisetax.com" class="text-dark text-decoration-none">oksana@expertisetax.com</a>
+					</div>
+					<div class="mb-3 fs-5">
+						<a href="https://www.expertisetax.com" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none">www.expertisetax.com</a>
+					</div>
+					<div class="fs-5">
+						<a href="tel:+1-617-352-5993" class="text-dark text-decoration-none">617-352-5993</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+{% endblock %}

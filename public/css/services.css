@@ -1,0 +1,11 @@
+.page-services{
+
+  /* File structure: public/css for CSS and public/images for images */
+
+    background-image: url('../images/form.jpg'); /* Path to your image */
+    background-repeat: no-repeat; /* No repeating the image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+ 
+
+}

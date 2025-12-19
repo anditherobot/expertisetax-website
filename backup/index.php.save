@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expertise Tax LLC - Professional Tax Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-color: #0F392C;
+      --secondary-color: #C5A572;
+      --text-color: #333;
+      --light-bg: #f5f7fa;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    /* Header */
+    .profile-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .profile-section h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin: 0.5rem 0;
+    }
+    
+    .title-badge {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+    
+    .slogan {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    /* Link Cards */
+    .link-card {
+      background: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--primary-color);
+      display: block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 2px solid var(--primary-color);
+    }
+    
+    .link-card:hover, .link-card:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Language Grid */
+    .language-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .language-section h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    .language-item {
+      padding: 0.8rem;
+      text-align: center;
+      background: var(--light-bg);
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    
+    .language-item .flag {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: var(--primary-color);
+    }
+    
+    @media (max-width: 480px) {
+      .language-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      body {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-section">
+      <span class="title-badge">Manager</span>
+      <h1>Oksana Shuran</h1>
+      <p>Expertise Tax LLC</p>
+      <p class="slogan">You don't have to be a tax expert. That's our job!</p>
+    </div>
+    
+    <a href="tel:617-352-5993" class="link-card">
+      <h2>📱 Call Us: 617-352-5993</h2>
+      <p>Tap to call now</p>
+    </a>
+    
+    <a href="mailto:oksana@expertisetax.com" class="link-card">
+      <h2>📧 Email Us</h2>
+      <p>oksana@expertisetax.com</p>
+    </a>
+    
+    <a href="http://www.expertisetax.com" class="link-card" target="_blank" rel="noopener noreferrer">
+      <h2>🌐 Visit Our Website</h2>
+      <p>www.expertisetax.com</p>
+    </a>
+    
+    <div class="language-section">
+      <h2>Get personalized tax service in:</h2>
+      <div class="language-grid">
+        <div class="language-item"><span class="flag">🇨🇳</span>Mandarin</div>
+        <div class="language-item"><span class="flag">🇵🇱</span>Polish</div>
+        <div class="language-item"><span class="flag">🇷🇺</span>Russian</div>
+        <div class="language-item"><span class="flag">🇺🇦</span>Ukrainian</div>
+        <div class="language-item"><span class="flag">🇭🇹</span>Haitian Creole</div>
+        <div class="language-item"><span class="flag">🇺🇸</span>English</div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 Expertise Tax LLC</p>
+      <p>Professional Tax Services</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# Composer
+/vendor/
+composer.lock
+
+# Slim Cache (if enabled)
+/cache/
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+/tmp/
+
+# Database files
+contacts.json
+database/
+
+# Claude Code
+.claude/
+
+# Deployment scripts
+sync_to_server.sh

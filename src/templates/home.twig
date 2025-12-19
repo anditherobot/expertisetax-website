@@ -1,0 +1,63 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+  <header class="bg-primary text-white">
+    <div class="container">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-7 col-xl-7 col-xxl-7">
+          <div class="my-5 text-center text-lg-start">
+            <h1 class="fw-bold text-white mb-2">You don't have to be a tax expert. That's our job!</h1>
+            <h3 class="text-white">File with Oksana Shuran</h3>
+            <span class="badge bg-light text-primary mb-3 fs-6">Registered Tax Return Preparer</span>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+              <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="/services">Our Services</a>
+              <a class="btn btn-outline-light btn-lg px-4" href="/contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-xl-5 col-xxl-5 text-center">
+          <img src="/images/expert.jpg" 
+               alt="Oksana Shuran Business Card" 
+               class="img-fluid rounded shadow mb-1 d-block" 
+               style="width: 100%; max-width: 500px;">
+        </div>
+      </div>
+    </div>
+ {{ include('bio-card.twig') }}
+    <section class="py-5" style="background: linear-gradient(90deg, #f0f9ff, #cbebff);">
+      <div class="container px-4 px-lg-5">
+      <div class="row align-items-stretch">
+        <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card h-100 border-0 shadow-sm" style="border-radius: 15px;">
+          <div class="card-body d-flex flex-column justify-content-center bg-white p-4">
+          <h2 class="card-title fw-bold mb-3 text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  color: #28a745;">
+            Get Personalized <br>Tax Service
+          </h2>
+          <h3 class="fw-bold mb-3 text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Call Now</h3>
+          <a href="tel:+1-617-352-5993" class="btn btn-dark btn-lg fw-bold fs-4 px-4 py-2 shadow-sm mb-3">
+            617-352-5993
+          </a>
+          <p class="lead mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">*File taxes up to the previous 3 Years</p>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6 d-flex">
+        <div class="card w-100 border-0 shadow-sm" style="border-radius: 15px;">
+          <div class="card-body p-0">
+          <video id="videolelement" poster="videos/poster.png" preload="none" controls class="w-100" style="height: 100%; border-radius: 15px;">
+            <source src="videos/ad.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    </header>
+
+
+{{ include('languages.twig') }}
+
+{% endblock %}

@@ -1,0 +1,446 @@
+/* ============================
+   CSS VARIABLES
+   ============================ */
+:root {
+  /* Primary Colors */
+  --primary-color: #006A4E;
+  --primary-hover: #004d39;
+  --accent-color: #F5A623;
+
+  /* Text Colors */
+  --text-light: #FFFFFF;
+  --text-dark: #2c3e50;
+  --text-muted: #6c757d;
+
+  /* Background Colors */
+  --bg-light: #F5F7FA;
+  --bg-white: #FFFFFF;
+  --bg-dark: #2c3e50;
+
+  /* Border & Shadow */
+  --border-radius: 15px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================
+   TYPOGRAPHY
+   ============================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Lead text */
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Display classes */
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ============================
+   CARD SYSTEM
+   ============================ */
+.card-standard {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  background: var(--bg-white);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-standard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive card padding */
+@media (min-width: 768px) {
+  .card-standard {
+    padding: 3rem;
+  }
+}
+
+/* ============================
+   BUTTON SYSTEM
+   ============================ */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 106, 78, 0.3);
+}
+
+.btn-light {
+  background-color: var(--bg-white);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.btn-outline-light {
+  border: 2px solid var(--bg-white);
+  color: var(--bg-white);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--bg-white);
+  color: var(--primary-color);
+}
+
+/* High-Contrast CTA Button */
+.btn-cta-primary {
+  background-color: #D4AF37;
+  border: 2px solid #D4AF37;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.875rem 2.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+.btn-cta-primary:hover {
+  background-color: #B8941F;
+  border-color: #B8941F;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
+}
+
+/* CTA Links (for phone numbers) */
+.cta-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* ============================
+   SPACING SYSTEM
+   ============================ */
+.section-padding {
+  padding: 4rem 0;
+}
+
+.section-padding-lg {
+  padding: 5rem 0;
+}
+
+.section-margin {
+  margin-bottom: 3rem;
+}
+
+.card-spacing {
+  margin-bottom: 2rem;
+}
+
+/* ============================
+   FORM STYLING
+   ============================ */
+.form-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.form-control {
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 106, 78, 0.15);
+  outline: none;
+}
+
+.required-indicator {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* ============================
+   LANGUAGE CARDS
+   ============================ */
+.language-card {
+  background: var(--bg-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.language-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* ============================
+   NAVBAR STYLING
+   ============================ */
+.navbar-custom-green {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-custom-green .navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.navbar-custom-green .nav-link {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.navbar-custom-green .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-item {
+  font-size: 1.2rem;
+}
+
+/* ============================
+   JUMBOTRON / HERO
+   ============================ */
+.jumbotron-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.jumbotron-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.jumbotron-header .title-badge {
+  font-size: 1.2rem;
+  padding: 0.7rem 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+
+.jumbotron-header .slogan {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Hero gradient background */
+.hero-gradient {
+  background: linear-gradient(90deg, #f0f9ff, #cbebff);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 0.7rem 0;
+}
+
+footer strong,
+footer small,
+footer span {
+  display: block;
+}
+
+footer strong {
+  color: #343a40;
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+footer small {
+  font-size: 0.9rem;
+  margin: 0.1rem 0 0.2rem;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0 0.3em;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* ============================
+   UTILITY CLASSES
+   ============================ */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* ============================
+   RESPONSIVE ADJUSTMENTS
+   ============================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .jumbotron-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .navbar-custom-green .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar-custom-green .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-standard {
+    padding: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-light,
+  .btn-outline-light {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .language-card {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+}
