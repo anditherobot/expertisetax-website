@@ -103,17 +103,12 @@
    * Enable the holiday theme
    */
   function enableHolidayTheme() {
-    // Show banner with fade-in effect
+    // Show banner immediately (no fade-in delay)
     const banner = document.getElementById('holiday-banner');
     if (banner) {
       banner.style.display = 'block';
-      banner.style.opacity = '0';
-      banner.style.transition = 'opacity 0.5s ease-in';
-
-      // Trigger fade-in after a brief delay
-      setTimeout(function() {
-        banner.style.opacity = '1';
-      }, 100);
+      banner.style.opacity = '1';
+      banner.style.transition = 'none';
     }
 
     // Add holiday mode class to body for color overrides

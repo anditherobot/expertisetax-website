@@ -1,0 +1,38 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+<main class="container py-5 post-page">
+    <div class="mb-4">
+        <a href="/resources" class="text-decoration-none fw-semibold" style="color: #006A4E;">&larr; Back to Resources</a>
+    </div>
+
+    <article class="card border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="badge bg-light text-success border border-success fw-semibold">{{ post.badge }}</span>
+                <span class="text-uppercase small text-muted">Expertise Tax</span>
+            </div>
+
+            <h1 class="display-5 fw-bold text-dark mb-3">{{ post.title }}</h1>
+            <p class="lead text-muted mb-4">{{ post.summary }}</p>
+
+            <div class="post-body fs-5">
+                {% for paragraph in post.content %}
+                    <p class="mb-4">{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="alert alert-light border mt-4 d-flex flex-column flex-md-row align-items-md-center">
+                <div>
+                    <h2 class="h5 fw-bold mb-2 text-black">{{ post.cta_heading|default('Ready to get started?') }}</h2>
+                    <p class="mb-0 text-black">{{ post.cta_text|default('Reach out for a quick call and we will build the right filing plan for you.') }}</p>
+                </div>
+                <div class="ms-md-auto mt-3 mt-md-0 d-flex gap-2">
+                    <a class="btn btn-primary" href="/contact">Book a call</a>
+                    <a class="btn btn-light border border-primary" href="tel:+1-617-352-5993">Call 617-352-5993</a>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+{% endblock %}
